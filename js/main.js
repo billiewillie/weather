@@ -42,5 +42,5 @@ function time(el, delay){
   }, delay);
 }
 
-time(document.querySelector('.text1'), 2000);
-time(document.querySelector('.text2'), 4000);
+time(document.querySelector('.text1'), 4000);
+time(document.querySelector('.text2'), 6000);
