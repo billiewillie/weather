@@ -24,7 +24,15 @@ window.addEventListener('load', () => {
           temperatureDegree.textContent = Math.floor((temperature-32)/1.8);
           temperatureDescription.textContent = summary;
           setIcons(icon, document.querySelector('.icon'));
-        });
+          function time(el, delay){
+            setTimeout(() => {
+              el.style.opacity = '1';
+            }, delay);
+          }
+          
+          time(document.querySelector('.text1'), 3000);
+          time(document.querySelector('.text2'), 5000);
+        })
     });
   }
 
@@ -35,12 +43,3 @@ window.addEventListener('load', () => {
     return skycons.set(iconID, Skycons[currentIcon]);
   }
 });
-
-function time(el, delay){
-  setTimeout(() => {
-    el.style.opacity = '1';
-  }, delay);
-}
-
-time(document.querySelector('.text1'), 4000);
-time(document.querySelector('.text2'), 6000);
